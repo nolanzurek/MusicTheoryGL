@@ -21,6 +21,15 @@ Processing Graphics Class for Music Theory
 
 #### ChordDisplay constructors
 
+`ChordDisplay(int range)` `range` sets the number of piano piano keys that will be drawn, ascending chromatically from C (range acts the same way in every constructor)
+
+`ChordDisplay(int range, String notesFormatString)` `notesFormatString` must be in the the form of ascending comma-separated numbers (ex. `"0,12,19,24,28,31,34"` from the above picture). Every integer in the string corresponds to a highlighted note in the piano or circle diagram; the number refers to the number of semitones above the starting C the note is (ex. 0 is C, 1 is C#, 12 6 is F#, etc). The remaining constructors use the same system; they just use different datastructures to store the integers:
+
+`ChordDisplay(int range, int[] notesFormatIntArr)` uses an array of `int`s
+`ChordDisplay(int range, ArrayList<Integer> notesFormatIntArrList)` uses a ArrayList of `Integer`s
+
 #### Draw methods (single image)
 
 #### Animation draw and render methods
+
+#### Setters
