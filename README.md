@@ -28,8 +28,8 @@ Processing Graphics Class for Music Theory
 `ChordDisplay(int range, int[] notesFormatIntArr)` uses an array of `int`s
 `ChordDisplay(int range, ArrayList<Integer> notesFormatIntArrList)` uses a ArrayList of `Integer`s
 
-#### Draw methods (single image)
+#### Piano draw and render methods
 
-#### Animation draw and render methods
+#### Circle draw and render methods
 
 #### Setters
