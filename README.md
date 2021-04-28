@@ -25,10 +25,27 @@ Processing Graphics Class for Music Theory
 
 `ChordDisplay(int range, String notesFormatString)` `notesFormatString` must be in the the form of ascending comma-separated numbers (ex. `"0,12,19,24,28,31,34"` from the above picture). Every integer in the string corresponds to a highlighted note in the piano or circle diagram; the number refers to the number of semitones above the starting C the note is (ex. 0 is C, 1 is C#, 12 6 is F#, etc). The remaining constructors use the same system; they just use different datastructures to store the integers:
 
-`ChordDisplay(int range, int[] notesFormatIntArr)` uses an array of `int`s
-`ChordDisplay(int range, ArrayList<Integer> notesFormatIntArrList)` uses a ArrayList of `Integer`s
+`ChordDisplay(int range, int[] notesFormatIntArr)` takes an array of `int`s
+`ChordDisplay(int range, ArrayList<Integer> notesFormatIntArrList)` takes a ArrayList of `Integer`s
 
 #### Piano draw and render methods
+
+`void drawPiano()` called on a `ChordDisplay` object draws a piano to the screen with highlighted notes corresponding to the constructor
+
+`void drawPiano(String notesFormatString)` creates a temporary `ChordDisplay` object, passing the range of the object it was called on and `notesFormatString` into the constructor. Like the constructors, the remaining `drawPiano(...)` methods use the same system; they just use different datastructures to store the integers:
+
+`void drawPiano(int... inputNotesFormat)` takes as many integers as are passed into the method, or an `int[]` datatype
+`void drawPiano(ArrayList<Integer> inputNotesFormat)` takes a ArrayList of `Integer`s
+
+`void renderPiano()` called on a `ChordDisplay` object draws a piano to the screen with highlighted notes corresponding to the constructor, then automatically saves the frame as a png file in the sketch folder. `void renderPiano(...)` takes the same arguments as `void drawPiano()`, as well as some others:
+
+`void renderPiano(String... args)` takes as many Strings as are passed into the method, or an `String[]` datatype, and renders a piano for each string (if 5 strings are inputted, 5 png files are saved to the sketch folder, one for each string). This method also supports the same other datatypes as before:
+
+`void renderPiano(ArrayList<Integer>... inArrListArr)` takes a number of `ArrayList<Integer>`s or `ArrayList<Integer>[]`
+`void renderPiano(int[]... inIntArrArr)` takes a number of `int[]`s or `int[][]`
+
+`void renderPianoFromArrString(ArrayList<String> inStringArrList)` takes notes in the form `ArrayList<String>`
+`void renderPianoFromArrArrInteger(ArrayList<ArrayList<Integer>> inArrListArrListInteger)` takes notes in the form `ArrayList<ArrayList<Integer>>`
 
 #### Circle draw and render methods
 
