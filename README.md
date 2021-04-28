@@ -41,12 +41,46 @@ Processing Graphics Class for Music Theory
 
 `void renderPiano(String... args)` takes as many Strings as are passed into the method, or an `String[]` datatype, and renders a piano for each string (if 5 strings are inputted, 5 png files are saved to the sketch folder, one for each string). This method also supports the same other datatypes as before:
 
-`void renderPiano(ArrayList<Integer>... inArrListArr)` takes a number of `ArrayList<Integer>`s or `ArrayList<Integer>[]`
-`void renderPiano(int[]... inIntArrArr)` takes a number of `int[]`s or `int[][]`
+`void renderPiano(ArrayList<Integer>... inArrListArr)` takes a number of `ArrayList<Integer>`s or `ArrayList<Integer>[]`.
+`void renderPiano(int[]... inIntArrArr)` takes a number of `int[]`s or `int[][]`.
 
-`void renderPianoFromArrString(ArrayList<String> inStringArrList)` takes notes in the form `ArrayList<String>`
-`void renderPianoFromArrArrInteger(ArrayList<ArrayList<Integer>> inArrListArrListInteger)` takes notes in the form `ArrayList<ArrayList<Integer>>`
+`void renderPianoFromArrString(ArrayList<String> inStringArrList)` takes notes in the form `ArrayList<String>`.
+`void renderPianoFromArrArrInteger(ArrayList<ArrayList<Integer>> inArrListArrListInteger)` takes notes in the form `ArrayList<ArrayList<Integer>>`.
 
 #### Circle draw and render methods
 
 #### Setters
+
+Setters modify various aspects of the appearance of the keyboards and circle diagrams; the parameter they set is evident from their name
+
+```Processing
+//REFER TO KEYBOARD
+
+void setWhiteKeyHeight(int input) 
+void setWhiteKeWidth(int input)
+void setPianoX(int input)                    //top-left corner
+void setPianoY(int input)                    //top-left corner
+void setBlackKeyHeightRatio(float input)     //sets ratio of black key height to white key height
+void setBlackKeyWidthRatio(float input)      //sets ratio of black key width to white key width
+void setKeyCornerRadius(int input)
+void setWhiteKeyColor(color input)
+void setBlackKeyColor(color input)
+void setWhiteKeyColorSelected(color input)   //when key is pressed
+void setBlackKeyColorSelected(color input)   //when key is pressed
+
+//REFER TO CIRCLES
+
+void setTextSize(int input)
+void setCircleSize(int input)
+void setLinesStrokeWeight(int input)
+void setTextColor(color input)
+void setCircleColor(color input)
+void setShowLines(boolean input)
+void toggleShowLines()
+
+//REFER TO BOTH
+
+void setBorderStrokeWeight(int input)
+void setBorderStroke(color input)
+
+```
