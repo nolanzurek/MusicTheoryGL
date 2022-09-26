@@ -1,4 +1,4 @@
-# ChordDisplay
+# Music Theory GL
 Processing Graphics Class for Music Theory
 
 ![pianoForGithub](https://user-images.githubusercontent.com/42624568/116135839-d4c24380-a68e-11eb-88b6-769f7aa99d4c.png)
